@@ -1,5 +1,22 @@
 function balancingParentheses(string) {
-  // type your code here
+  let openP = 0
+  let missing =0 
+  
+  for(let i =0; i<string.length; i++){
+    if(string[i] === '('){
+      openP++
+      console.log(openP)
+      continue;
+    }
+    if(openP>0){
+      openP--
+      console.log(openP)
+    }else{
+      missing++
+    }
+  }
+  let sum = openP + missing
+  return sum
 }
 
 if (require.main === module) {
